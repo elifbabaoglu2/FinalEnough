@@ -347,3 +347,81 @@ cursor: pointer;
   height:200px; 
   width:100%
 }
+
+@media screen and (max-width: 414px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .item1{
+    margin-bottom: 30px !important;
+  }
+  .item2{
+    margin-bottom:300px;
+    text-align: center;
+  }
+  .item3{
+    margin-top:570px;
+  }
+  .grid-container{
+    width:360px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .b{
+    text-align: center;
+  }
+  .project{
+    flex-wrap: wrap;
+  }
+  .photo, .style-image{
+    width:0px;
+    height:0px;
+  }
+  .me{
+    text-align: left;
+    margin-left: 15px;
+  }
+
+}
+
+@media screen and (max-width:1000px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .item1{
+    margin-bottom: 30px !important;
+  }
+  .item2{
+    margin-bottom:300px;
+    text-align: center;
+  }
+  .item3{
+    margin-top:300px;
+  }
+  .grid-container{
+    width:600px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .b{
+    text-align: center;
+  }
+  .project{
+    flex-wrap: wrap;
+  }
+  .photo, .style-image{
+    width:0px;
+    height:0px;
+  }
+  .me{
+    text-align: center;
+    margin-left: 145px;
+    width:600px;
+  }
+  .about-me{
+    width:600px;
+  }
+
+}
