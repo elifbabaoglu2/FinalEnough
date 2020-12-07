@@ -1,50 +1,349 @@
-/* Put your style information here! */
-body {
-    background-color: pink;
-      margin:0; padding:0;
-      overflow-x:hidden;
-      height:100%;
-      width:100%;
-      font-family: 'Lato', Helvetica, arial, sans-serif;
-      font-weight: 300;
-      font-size: 20px;
-      line-height: 1.45;
-      color: #eee;
-      color: rgba(255,255,255,.85);
-      text-align: center;
-  }
-  #container { 
-      padding-top: 50px;
-  }
-  .center1 {
-    margin: auto;
-    width: 50%;
-    border: 3px solid white;
-    padding: 10px;
-  }
 
-  .center2 {
-    margin: auto;
-    width: 90%;
-    border: 3px solid white;
-    padding: 10px;
-  }
-  .center {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-  }
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-  .par {
-    margin: auto;
-    width: 90%;
-    padding: 2px;
+body {
+  background-image: url("pexels-steve-johnson-1704120.jpg");
+  background-color: #cccccc;
+  
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+ }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  height: 350px;
+  font-size: 15px;
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  border-left: solid;
+  border-color: white;
+}
+
+.item2 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.a {
+  margin-top: 20px;
+  text-align: center;
+}  
+
+.b {
+  font-size: 15px;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 20px;
+  font-family: Chalkduster, fantasy;
+  color: white;
+}  
+
+.about-me{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;;
+}
+
+.project{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.photo{
+    width: 30%;
+    height:200px;
+}
+.me{
+    max-width: 300px;
+    height:200px;
+    font-size: 15px;
+    margin-left: 50px;
     margin-top: 20px;
-  }
+    text-align: left;
+    font-family: Chalkduster, fantasy;
+    color: white;
+
+}
+
+.item3 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border-top: solid;
+  border-color: white;
+  
+}
+
+.style-image{
+    height: 180px;
+    width: auto;
+    margin:20px;
+}
+
+.project-section{
+    height:200px;
+    width:100%;
+
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 85vw;
+  margin: 1rem auto;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: white;
+  opacity: 90%;
+}
+.bg, .overlay {
+  text-align: center;
+}
+img, .overlay {
+  transition: 0.3s all;
+  border-radius: 3px;
+}
+.bg {
+  float: left;
+  max-width: 31%;
+  position: relative;
+  margin: 0.5%;
+}
+.bg img {
+  width: 100%;
+  margin-bottom: -4px;
+}
+.bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  opacity: 0;
+}
+.bg .overlay h2 {
+  padding-top: 20%;
+  font-family: 'Droid Serif', serif;
+}
+.bg .overlay p {
+  font-family: 'Julius Sans One', sans-serif;
+}
+.bg:hover .overlay {
+  opacity: 1;
+}
+.bg:hover img {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+@media screen and (max-width: 1148px) {
+  .bg {
+      max-width: 48%;
+      margin: 1%;
+ }
+}
+@media screen and (max-width: 768px) {
+  .bg {
+      float: none;
+      max-width: 80%;
+      margin: 1% auto;
+ }
+}
+.container {
+  position: relative;
+  width: 230px;
+  height:200px;
+  display:inline-block;
+  border-radius: 25px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: Chalkduster, fantasy;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+background-image: url("pexels-steve-johnson-1704120.jpg");
+background-color: #cccccc;
+  
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+margin: auto;
+padding: 20px;
+width: 80%;
+height: 800px;
+border-radius: 25px;
+border-style: solid;
+border-color: white;
+
+}
+
+/* The Close Button */
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+.close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close3 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close4 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.close2:hover,
+.close2:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+.close3:hover,
+.close3:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.close4:hover,
+.close4:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.title-styling{
+  font-size: larger;
+  font-family: Chalkduster, fantasy;
+  color:white;
+  text-align: left;
+  margin-left: 30px;
+
+}
+
+.contact{
+  height:30px; 
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.logos{
+  margin:10px;
+  height:50px;
+  width:50px;
+
+}
+
+.logos-invisible{
+  margin:10px;
+  height:30px;
+  width:30px;
+}
+
+.image-placement{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top:20px; 
+  height:200px; 
+  width:100%
+}
